@@ -9,6 +9,16 @@ export class Demo extends React.Component {
 	render() {
 		return (
 			<div className="container">
+				<div className="jumbotron text-center">
+					<div className="jumbocontain">
+						<h1 className="jumbotron-heading">Join This Group!</h1>
+						<p>
+							<a href="#" className="btn btn-primary my-2">
+								Join Meetup
+							</a>
+						</p>
+					</div>
+				</div>
 				<ul className="list-group">
 					<Context.Consumer>
 						{({ store, actions }) => {
