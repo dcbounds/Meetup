@@ -22,7 +22,7 @@ export class Home extends React.Component {
 					<div className="text-center mt-5">
 						<div className="row">
 							<div className="col-md-4">
-								<div className="card mb-4 shadow-sm">
+								<div className="card mb-4">
 									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 										<title>Placeholder</title>
 									</svg>
@@ -45,7 +45,7 @@ export class Home extends React.Component {
 								</div>
 							</div>
 							<div className="col-md-4">
-								<div className="card mb-4 shadow-sm">
+								<div className="card mb-4">
 									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 										<title>Placeholder</title>
 									</svg>
@@ -68,7 +68,7 @@ export class Home extends React.Component {
 								</div>
 							</div>
 							<div className="col-md-4">
-								<div className="card mb-4 shadow-sm">
+								<div className="card mb-4">
 									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 										<title>Placeholder</title>
 									</svg>
@@ -92,7 +92,7 @@ export class Home extends React.Component {
 							</div>
 
 							<div className="col-md-4">
-								<div className="card mb-4 shadow-sm">
+								<div className="card mb-4">
 									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 										<title>Placeholder</title>
 									</svg>
@@ -115,7 +115,7 @@ export class Home extends React.Component {
 								</div>
 							</div>
 							<div className="col-md-4">
-								<div className="card mb-4 shadow-sm">
+								<div className="card mb-4">
 									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 										<title>Placeholder</title>
 									</svg>
@@ -138,7 +138,7 @@ export class Home extends React.Component {
 								</div>
 							</div>
 							<div className="col-md-4">
-								<div className="card mb-4 shadow-sm">
+								<div className="card mb-4">
 									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 										<title>Placeholder</title>
 									</svg>
