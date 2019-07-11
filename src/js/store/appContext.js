@@ -22,20 +22,22 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			fetch("./api/some.json")
-				.then(function(response) {
+			// Fetch events
+			fetch("https://assets.breatheco.de/apis/fake/meetup/events")
+				.then(response => {
 					if (response.status !== 200) {
-						console.log("Looks like there was a problem. Status Code: " + response.status);
+						alert("Connection error, status " + response.status);
 						return;
 					}
 
-					// Examine the text in the response
-					response.json().then(function(data) {
-						console.log(data);
+					response.json().then(data => {
+						let store = this.state.store;
+						store.events = data;
+						this.setState({ store });
 					});
 				})
-				.catch(function(err) {
-					console.log("Fetch Error :-S", err);
+				.catch(err => {
+					alert("Fetch error: ", err);
 				});
 		}
 
