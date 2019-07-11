@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			demo: [
+			meet: [
 				{
 					title: "FIRST",
 					background: "white",
@@ -19,15 +19,15 @@ const getState = ({ getStore, setStore }) => {
 				//get the store
 				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
+				//we have to loop the entire meet array to look for the respective index
 				//and change its color
-				const demo = store.demo.map((elm, i) => {
+				const meet = store.meet.map((elm, i) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
 
 				//reset the global store
-				setStore({ demo: demo });
+				setStore({ meet: meet });
 			}
 		}
 	};

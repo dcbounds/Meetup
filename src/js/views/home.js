@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/home.scss";
+import { Link } from "react-router-dom";
 
 export class Home extends React.Component {
 	render() {
@@ -12,9 +13,9 @@ export class Home extends React.Component {
 							Join a local group to meet people, try something new, or do more of what you love.
 						</p>
 						<p>
-							<a href="#" className="btn btn-primary my-2">
-								Join Meetup
-							</a>
+							<Link to="/meet">
+								<button className="btn btn-light">Join Meetup</button>
+							</Link>
 						</p>
 					</div>
 				</div>
@@ -22,143 +23,103 @@ export class Home extends React.Component {
 					<div className="text-center mt-5">
 						<div className="row">
 							<div className="col-md-4">
-								<div className="card mb-4">
-									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
-										<title>Placeholder</title>
-									</svg>
-									<div className="card-body">
-										<p className="card-text">
-											Meetup with us this weekend! Lets get together folks!
-										</p>
-										<div className="d-flex justify-content-between align-items-center">
-											<div className="btn-group">
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													View
-												</button>
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													Join!
-												</button>
+								<Link to="/event" style={{ textDecoration: "none" }}>
+									<div className="card mb-4">
+										<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
+											<title>Placeholder</title>
+										</svg>
+										<div className="card-body">
+											<p className="card-text">
+												Meetup with us this weekend! Lets get together folks!
+											</p>
+											<div className="d-flex justify-content-between align-items-center">
+												<div className="btn-group">
+													<Link to="/meet">
+														<button
+															type="button"
+															className="btn btn-sm btn-outline-secondary">
+															View Meetup
+														</button>
+													</Link>
+													<Link to="/event">
+														<button
+															type="button"
+															className="btn btn-sm btn-outline-secondary">
+															Join Event!
+														</button>
+													</Link>
+												</div>
+												<small className="text-muted">9 mins</small>
 											</div>
-											<small className="text-muted">9 mins</small>
 										</div>
 									</div>
-								</div>
+								</Link>
 							</div>
 							<div className="col-md-4">
-								<div className="card mb-4">
-									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
-										<title>Placeholder</title>
-									</svg>
-									<div className="card-body">
-										<p className="card-text">
-											Meetup with us this weekend! Lets get together folks!
-										</p>
-										<div className="d-flex justify-content-between align-items-center">
-											<div className="btn-group">
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													View
-												</button>
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													Join!
-												</button>
+								<Link to="/event" style={{ textDecoration: "none" }}>
+									<div className="card mb-4">
+										<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
+											<title>Placeholder</title>
+										</svg>
+										<div className="card-body">
+											<p className="card-text">
+												Meetup with us this weekend! Lets get together folks!
+											</p>
+											<div className="d-flex justify-content-between align-items-center">
+												<div className="btn-group">
+													<Link to="/meet">
+														<button
+															type="button"
+															className="btn btn-sm btn-outline-secondary">
+															View Meetup
+														</button>
+													</Link>
+													<Link to="/event">
+														<button
+															type="button"
+															className="btn btn-sm btn-outline-secondary">
+															Join Event!
+														</button>
+													</Link>
+												</div>
+												<small className="text-muted">9 mins</small>
 											</div>
-											<small className="text-muted">9 mins</small>
 										</div>
 									</div>
-								</div>
+								</Link>
 							</div>
 							<div className="col-md-4">
-								<div className="card mb-4">
-									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
-										<title>Placeholder</title>
-									</svg>
-									<div className="card-body">
-										<p className="card-text">
-											Meetup with us this weekend! Lets get together folks!
-										</p>
-										<div className="d-flex justify-content-between align-items-center">
-											<div className="btn-group">
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													View
-												</button>
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													Join!
-												</button>
+								<Link to="/event" style={{ textDecoration: "none" }}>
+									<div className="card mb-4">
+										<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
+											<title>Placeholder</title>
+										</svg>
+										<div className="card-body">
+											<p className="card-text">
+												Meetup with us this weekend! Lets get together folks!
+											</p>
+											<div className="d-flex justify-content-between align-items-center">
+												<div className="btn-group">
+													<Link to="/meet">
+														<button
+															type="button"
+															className="btn btn-sm btn-outline-secondary">
+															View Meetup
+														</button>
+													</Link>
+													<Link to="/event">
+														<button
+															type="button"
+															className="btn btn-sm btn-outline-secondary">
+															Join Event!
+														</button>
+													</Link>
+												</div>
+												<small className="text-muted">9 mins</small>
 											</div>
-											<small className="text-muted">9 mins</small>
 										</div>
 									</div>
-								</div>
-							</div>
-
-							<div className="col-md-4">
-								<div className="card mb-4">
-									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
-										<title>Placeholder</title>
-									</svg>
-									<div className="card-body">
-										<p className="card-text">
-											Meetup with us this weekend! Lets get together folks!
-										</p>
-										<div className="d-flex justify-content-between align-items-center">
-											<div className="btn-group">
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													View
-												</button>
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													Join!
-												</button>
-											</div>
-											<small className="text-muted">9 mins</small>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-4">
-								<div className="card mb-4">
-									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
-										<title>Placeholder</title>
-									</svg>
-									<div className="card-body">
-										<p className="card-text">
-											Meetup with us this weekend! Lets get together folks!
-										</p>
-										<div className="d-flex justify-content-between align-items-center">
-											<div className="btn-group">
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													View
-												</button>
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													Join!
-												</button>
-											</div>
-											<small className="text-muted">9 mins</small>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-4">
-								<div className="card mb-4">
-									<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
-										<title>Placeholder</title>
-									</svg>
-									<div className="card-body">
-										<p className="card-text">
-											Meetup with us this weekend! Lets get together folks!
-										</p>
-										<div className="d-flex justify-content-between align-items-center">
-											<div className="btn-group">
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													View
-												</button>
-												<button type="button" className="btn btn-sm btn-outline-secondary">
-													Join!
-												</button>
-											</div>
-											<small className="text-muted">9 mins</small>
-										</div>
-									</div>
-								</div>
+								</Link>
 							</div>
 						</div>
 					</div>

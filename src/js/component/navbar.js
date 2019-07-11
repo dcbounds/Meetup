@@ -10,8 +10,8 @@ export class Navbar extends React.Component {
 					<img className="logo" width="75px" margin="0px" src={Meetupimg} />
 				</Link>
 				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Start a New Group</button>
+					<Link to="/event">
+						<button className="btn btn-dark">Start a New Group</button>
 					</Link>
 				</div>
 			</nav>
