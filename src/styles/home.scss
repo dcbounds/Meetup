@@ -4,6 +4,7 @@
     text-decoration: none;
     color: rgb(50, 50, 50);
     transition: all .3s ease-in-out;
+      background-size: cover;
 }
 
 .card:hover {
@@ -12,6 +13,7 @@
     text-decoration: none;
     color: rgb(50, 50, 50);
     transform: scale(1.009);
+      background-size: cover;
 
 
 }
@@ -62,7 +64,7 @@ body {
 }
 
 .card-img-top {
-    background-image: url("http://www.orlandonorthsports.com/assets/images/placeholders/placeholder-event.png");
+    background-image: url("http://bethellonedell.com/wp-content/uploads/blue-gradient-background.png");
     background-size: cover;
     border-radius: 5px;
 }

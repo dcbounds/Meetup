@@ -24,8 +24,8 @@ export class Layout extends React.Component {
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Home} />
-							<Route path="/meetups/:theid" component={Meetups} />
-							<Route path="/events/:theid" component={Events} />
+							<Route path="/meetups/" component={Meetups} />
+							<Route path="/events/" component={Events} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

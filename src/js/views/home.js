@@ -14,10 +14,51 @@ export class Home extends React.Component {
 							Join a local group to meet people, try something new, or do more of what you love.
 						</p>
 						<p>
-							<Link to="/meeupsfdfdfddddupsupmeet up ⬆upupuuupptupsssdups">
+							<Link to="/meetups">
 								<button className="btn btn-light">Join Meetup</button>
 							</Link>
 						</p>
+					</div>
+				</div>
+				<div className="container mx-auto">
+					<div className="text-center mt-5">
+						<div className="row">
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return store.events.map((item, index) => {
+										return (
+											<div key={index} className="card mb-4 d-flex justify-content-between">
+												<svg
+													className="bd-placeholder-img card-img-top"
+													width="100%"
+													height="225">
+													<title>Placeholder</title>
+												</svg>
+												<div className="card-body">
+													<p className="card-text">{item.ID.post_title}</p>
+													<Link to={"/events/" + index} style={{ textDecoration: "none" }}>
+														<button className="btn btn-sm btn-outline-secondary">
+															Join Event
+														</button>
+													</Link>
+													<Link to={"/meetups/" + index} style={{ textDecoration: "none" }}>
+														<button className="btn btn-sm btn-outline-secondary">
+															View Meetup
+														</button>
+													</Link>
+													<p>{item.ID}</p>
+													<button
+														className="btn btn-info"
+														onClick={() => actions.changeColor(index, "orange")}>
+														Change Color
+													</button>
+												</div>
+											</div>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
 					</div>
 				</div>
 				<div className="container mx-auto">

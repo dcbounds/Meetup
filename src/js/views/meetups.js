@@ -23,9 +23,7 @@ export class Meetups extends React.Component {
 				<Context.Consumer>
 					{({ store }) => {
 						return (
-							<h1 className="display-4">
-								This will show the demo element: {store.events[this.props.match.params.theid].ID}
-							</h1>
+							<h1>This will show the demo element: {store.events[this.props.match.params.theid].ID}</h1>
 						);
 					}}
 				</Context.Consumer>
@@ -38,6 +36,6 @@ export class Meetups extends React.Component {
 		);
 	}
 }
-Single.propTypes = {
+Meetups.propTypes = {
 	match: PropTypes.object
 };

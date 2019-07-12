@@ -34,7 +34,7 @@ export class Events extends React.Component {
 											</Link>
 											<p>{"Check store/store.js scroll to the actions to see the code "}</p>
 											<button
-												className="btn btn-success"
+												className="btn btn-info"
 												onClick={() => actions.changeColor(index, "orange")}>
 												Change Color
 											</button>
