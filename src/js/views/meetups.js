@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
@@ -19,6 +20,15 @@ export class Meetups extends React.Component {
 						</p>
 					</div>
 				</div>
+				<Context.Consumer>
+					{({ store }) => {
+						return (
+							<h1 className="display-4">
+								This will show the demo element: {store.events[this.props.match.params.theid].ID}
+							</h1>
+						);
+					}}
+				</Context.Consumer>
 
 				<br />
 				<Link to="/">
@@ -28,3 +38,6 @@ export class Meetups extends React.Component {
 		);
 	}
 }
+Single.propTypes = {
+	match: PropTypes.object
+};
