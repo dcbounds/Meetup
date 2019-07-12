@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
-import "../../styles/meet.scss";
+import "../../styles/meetups.scss";
 
-export class Meet extends React.Component {
+export class Meetups extends React.Component {
 	render() {
 		return (
 			<div className="container mx-auto">

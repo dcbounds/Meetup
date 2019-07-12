@@ -13,7 +13,7 @@ export class Home extends React.Component {
 							Join a local group to meet people, try something new, or do more of what you love.
 						</p>
 						<p>
-							<Link to="/meet">
+							<Link to="/meetups">
 								<button className="btn btn-light">Join Meetup</button>
 							</Link>
 						</p>
@@ -23,7 +23,7 @@ export class Home extends React.Component {
 					<div className="text-center mt-5">
 						<div className="row">
 							<div className="col-md-4">
-								<Link to="/event" style={{ textDecoration: "none" }}>
+								<Link to="/events" style={{ textDecoration: "none" }}>
 									<div className="card mb-4">
 										<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 											<title>Placeholder</title>
@@ -34,14 +34,14 @@ export class Home extends React.Component {
 											</p>
 											<div className="d-flex justify-content-between align-items-center">
 												<div className="btn-group">
-													<Link to="/meet">
+													<Link to="/meetups">
 														<button
 															type="button"
 															className="btn btn-sm btn-outline-secondary">
 															View Meetup
 														</button>
 													</Link>
-													<Link to="/event">
+													<Link to="/events">
 														<button
 															type="button"
 															className="btn btn-sm btn-outline-secondary">
@@ -56,7 +56,7 @@ export class Home extends React.Component {
 								</Link>
 							</div>
 							<div className="col-md-4">
-								<Link to="/event" style={{ textDecoration: "none" }}>
+								<Link to="/events" style={{ textDecoration: "none" }}>
 									<div className="card mb-4">
 										<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 											<title>Placeholder</title>
@@ -67,14 +67,14 @@ export class Home extends React.Component {
 											</p>
 											<div className="d-flex justify-content-between align-items-center">
 												<div className="btn-group">
-													<Link to="/meet">
+													<Link to="/meetups">
 														<button
 															type="button"
 															className="btn btn-sm btn-outline-secondary">
 															View Meetup
 														</button>
 													</Link>
-													<Link to="/event">
+													<Link to="/events">
 														<button
 															type="button"
 															className="btn btn-sm btn-outline-secondary">
@@ -89,7 +89,7 @@ export class Home extends React.Component {
 								</Link>
 							</div>
 							<div className="col-md-4">
-								<Link to="/event" style={{ textDecoration: "none" }}>
+								<Link to="/events" style={{ textDecoration: "none" }}>
 									<div className="card mb-4">
 										<svg className="bd-placeholder-img card-img-top" width="100%" height="225">
 											<title>Placeholder</title>
@@ -100,14 +100,14 @@ export class Home extends React.Component {
 											</p>
 											<div className="d-flex justify-content-between align-items-center">
 												<div className="btn-group">
-													<Link to="/meet">
+													<Link to="/meetups">
 														<button
 															type="button"
 															className="btn btn-sm btn-outline-secondary">
 															View Meetup
 														</button>
 													</Link>
-													<Link to="/event">
+													<Link to="/events">
 														<button
 															type="button"
 															className="btn btn-sm btn-outline-secondary">

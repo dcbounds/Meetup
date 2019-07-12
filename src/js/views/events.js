@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
-import "../../styles/event.scss";
+import "../../styles/events.scss";
 
-export class Event extends React.Component {
+export class Events extends React.Component {
 	render() {
 		return (
 			<div className="container mx-auto">
