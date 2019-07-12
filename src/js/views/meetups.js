@@ -20,14 +20,6 @@ export class Meetups extends React.Component {
 						</p>
 					</div>
 				</div>
-				<Context.Consumer>
-					{({ store }) => {
-						return (
-							<h1>This will show the demo element: {store.events[this.props.match.params.theid].ID}</h1>
-						);
-					}}
-				</Context.Consumer>
-
 				<br />
 				<Link to="/">
 					<button className="btn btn-dark">Back home</button>
@@ -36,6 +28,3 @@ export class Meetups extends React.Component {
 		);
 	}
 }
-Meetups.propTypes = {
-	match: PropTypes.object
-};

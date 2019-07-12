@@ -49,7 +49,7 @@ const injectContext = PassedComponent => {
 
 					response.json().then(data => {
 						let store = this.state.store;
-						store.events = data;
+						store.meetups = data;
 						this.setState({ store });
 					});
 				})

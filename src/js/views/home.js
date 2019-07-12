@@ -1,8 +1,9 @@
 import React from "react";
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
+import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
+import Moment from "react-moment";
 
 export class Home extends React.Component {
 	render() {
@@ -34,10 +35,10 @@ export class Home extends React.Component {
 														className="bd-placeholder-img card-img-top"
 														width="100%"
 														height="225">
-														<span>{item.ID.post_title}</span>
+														<span>{item.ID}</span>
 													</svg>
 													<div className="card-body">
-														<h1>{store.events.post_title}</h1>
+														<h5>{item.post_title}</h5>
 
 														<div className="d-flex justify-content-between align-items-center">
 															<div className="btn-group">
@@ -45,14 +46,14 @@ export class Home extends React.Component {
 																	to={"/events/" + index}
 																	style={{ textDecoration: "none" }}>
 																	<button className="btn btn-sm btn-outline-secondary">
-																		Join Event
+																		Join Event {item.ID}
 																	</button>
 																</Link>
 																<Link
 																	to={"/meetups/" + index}
 																	style={{ textDecoration: "none" }}>
 																	<button className="btn btn-sm btn-outline-secondary">
-																		View Meetup
+																		View Meetup {item.ID}
 																	</button>
 																</Link>
 															</div>
