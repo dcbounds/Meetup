@@ -4,7 +4,9 @@
     text-decoration: none;
     color: rgb(50, 50, 50);
     transition: all .3s ease-in-out;
-      background-size: cover;
+    background-size: cover;
+    margin: 0 auto;
+    float: none;
 }
 
 .card:hover {
@@ -13,9 +15,7 @@
     text-decoration: none;
     color: rgb(50, 50, 50);
     transform: scale(1.009);
-      background-size: cover;
-
-
+    background-size: cover;
 }
 
 
