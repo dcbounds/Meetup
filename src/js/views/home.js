@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
-import Meetupcard from "../component/meetupcard.js";
+import Eventcard from "../component/eventcard.js";
 
 export class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="jumbotron text-center">
+				<div className="jumbotron homejumbo text-center">
 					<div className="jumbocontain">
 						<h1 className="jumbotron-heading">The real world is calling</h1>
 						<p className="lead text">
@@ -23,7 +23,7 @@ export class Home extends React.Component {
 						</p>
 					</div>
 				</div>
-				<Meetupcard />
+				<Eventcard />
 			</div>
 		);
 	}

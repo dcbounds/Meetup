@@ -5,7 +5,7 @@ import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
 
-export default class Meetupcard extends React.Component {
+export default class Eventcard extends React.Component {
 	render() {
 		return (
 			<div>
@@ -25,7 +25,7 @@ export default class Meetupcard extends React.Component {
 														<span>{item.ID}</span>
 													</svg>
 													<div className="card-body">
-														<h5>{item.post_title}</h5>
+														<h5>{index}</h5>
 
 														<div className="d-flex justify-content-between align-items-center">
 															<div className="btn-group">
@@ -33,14 +33,14 @@ export default class Meetupcard extends React.Component {
 																	to={"/events/" + index}
 																	style={{ textDecoration: "none" }}>
 																	<button className="btn btn-sm btn-outline-secondary">
-																		Join Event {item.ID}
+																		Join Event {}
 																	</button>
 																</Link>
 																<Link
 																	to={"/meetups/" + index}
 																	style={{ textDecoration: "none" }}>
 																	<button className="btn btn-sm btn-outline-secondary">
-																		View Meetup {item.ID}
+																		View Meetup {}
 																	</button>
 																</Link>
 															</div>
@@ -60,6 +60,11 @@ export default class Meetupcard extends React.Component {
 		);
 	}
 }
-Meetupcard.propTypes = {
-	match: PropTypes.object
+Eventcard.propTypes = {
+	eventsDate: PropTypes.object,
+	eventsTime: PropTypes.string,
+	eventsTitle: PropTypes.string,
+	meetup: PropTypes.string,
+	meetID: PropTypes.string,
+	eventsID: PropTypes.number
 };
