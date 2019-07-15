@@ -3,26 +3,27 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 import Moment from "react-moment";
-
 import "../../styles/events.scss";
 
 export class Events extends React.Component {
 	render() {
 		let parseMoment = (data, format) => {
 			if (format == "date") {
-				return <Moment format="MM/DD">{data}</Moment>;
+				return <Moment format="MM/DD/YY">{data}</Moment>;
 			}
 			if (format == "time") {
-				let timeArr = data.split(":");
-				let tikToc = String(timeArr[0]) + ":" + String(timeArr[1]);
-				return tikToc;
+				return (
+					<Moment format="LT" parse="HH:mm:ss">
+						{data}
+					</Moment>
+				);
 			}
 		};
 		return (
 			<div className="text-center">
 				<Context.Consumer>
 					{({ store, actions }) => {
-						let eventsID = this.props.match.params.ID;
+						let eventsID = this.props.match.params.theid;
 						let eventsObj = actions.findEvents(eventsID);
 						let meetID = actions.findMeetups(eventsObj.meta_keys._meetup);
 						return (
@@ -34,16 +35,16 @@ export class Events extends React.Component {
 											<a href="#" className="btn btn-light my-2">
 												Join Event
 											</a>
-											<div>{this.props.eventsObj.post_title}</div>
-											<div>{this.props.meetID}</div>
+											<div>{eventsObj.post_title}</div>
+											<div>{meetID}</div>
 										</p>
 									</div>
 								</div>
 								<div className="container">
 									<div className="card">
-										<p key={index} className="list-group-item d-flex justify-content-between">
-											<Link to={"/meetups/" + index}>
-												<span> {item.post_content}</span>
+										<p className="list-group-item d-flex justify-content-between">
+											<Link to={"/meetups/" + meetID}>
+												<span> {eventsObj.post_title}</span>
 											</Link>
 											<p>{"Blank Stuff"}</p>
 										</p>
@@ -63,12 +64,5 @@ export class Events extends React.Component {
 }
 
 Events.propTypes = {
-	match: PropTypes.object,
-	eventsDate: PropTypes.object,
-	eventsTime: PropTypes.string,
-	eventsTitle: PropTypes.string,
-	meetup: PropTypes.string,
-	meetID: PropTypes.string,
-	eventsID: PropTypes.number,
-	eventsObj: PropTypes.object
+	match: PropTypes.object
 };

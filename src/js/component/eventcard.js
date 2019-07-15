@@ -37,7 +37,7 @@ export default class Eventcard extends React.Component {
 																	</button>
 																</Link>
 																<Link
-																	to={"/meetups/" + item.ID}
+																	to={"/meetups/" + item.meta_keys._meetup}
 																	style={{ textDecoration: "none" }}>
 																	<button className="btn btn-sm btn-outline-secondary">
 																		View Meetup {}
