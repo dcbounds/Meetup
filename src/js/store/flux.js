@@ -2,14 +2,13 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			events: [],
-			meetups: [],
-			session: {}
+			meetups: []
 		},
 		actions: {
 			findMeetups: meetID => {
 				const store = getStore();
 				if (store.meetups !== []) {
-					let meet = store.meetups.filter((item, index) => {
+					const meet = store.meetups.filter((item, index) => {
 						if (item.ID == meetID) {
 							return item;
 						}
@@ -22,7 +21,7 @@ const getState = ({ getStore, setStore }) => {
 			findEvents: eventsID => {
 				const store = getStore();
 				if (store.events !== []) {
-					let event = store.events.filter((item, index) => {
+					const event = store.events.filter((item, index) => {
 						if (item.ID == eventsID) {
 							return item;
 						}

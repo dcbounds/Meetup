@@ -22,9 +22,9 @@ export class Events extends React.Component {
 			<div className="text-center">
 				<Context.Consumer>
 					{({ store, actions }) => {
-						let eventsID = this.props.match.params.theid;
+						let eventsID = this.props.match.params.ID;
 						let eventsObj = actions.findEvents(eventsID);
-						let meetName = actions.findMeetups(eventsObj.meta_keys._meetup);
+						let meetID = actions.findMeetups(eventsObj.meta_keys._meetup);
 						return (
 							<div className="container mx-auto">
 								<div className="jumbotron text-center">
@@ -34,9 +34,9 @@ export class Events extends React.Component {
 											<a href="#" className="btn btn-light my-2">
 												Join Event
 											</a>
-											{eventsObj.post_title}
+											<div>{this.props.eventsObj.post_title}</div>
+											<div>{this.props.meetID}</div>
 										</p>
-										{meetupName}
 									</div>
 								</div>
 								<div className="container">
@@ -63,5 +63,12 @@ export class Events extends React.Component {
 }
 
 Events.propTypes = {
-	match: PropTypes.object
+	match: PropTypes.object,
+	eventsDate: PropTypes.object,
+	eventsTime: PropTypes.string,
+	eventsTitle: PropTypes.string,
+	meetup: PropTypes.string,
+	meetID: PropTypes.string,
+	eventsID: PropTypes.number,
+	eventsObj: PropTypes.object
 };

@@ -25,19 +25,19 @@ export default class Eventcard extends React.Component {
 														<span>{item.ID}</span>
 													</svg>
 													<div className="card-body">
-														<h5>{index}</h5>
+														<h5>{item.post_title}</h5>
 
 														<div className="d-flex justify-content-between align-items-center">
 															<div className="btn-group">
 																<Link
-																	to={"/events/" + index}
+																	to={"/events/" + item.ID}
 																	style={{ textDecoration: "none" }}>
 																	<button className="btn btn-sm btn-outline-secondary">
 																		Join Event {}
 																	</button>
 																</Link>
 																<Link
-																	to={"/meetups/" + index}
+																	to={"/meetups/" + item.ID}
 																	style={{ textDecoration: "none" }}>
 																	<button className="btn btn-sm btn-outline-secondary">
 																		View Meetup {}
@@ -66,5 +66,6 @@ Eventcard.propTypes = {
 	eventsTitle: PropTypes.string,
 	meetup: PropTypes.string,
 	meetID: PropTypes.string,
-	eventsID: PropTypes.number
+	eventsID: PropTypes.number,
+	eventsObj: PropTypes.object
 };
