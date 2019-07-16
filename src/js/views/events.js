@@ -28,26 +28,34 @@ export class Events extends React.Component {
 						let meetID = actions.findMeetups(eventsObj.meta_keys._meetup);
 						return (
 							<div className="container mx-auto">
-								<div className="jumbotron text-center">
+								<div className="jumbotron jumbo text-center">
 									<div className="jumbocontain mx-auto">
-										<h1 className="jumbotron-heading">Join This Event!</h1>
-										<p>
-											<a href="#" className="btn btn-light my-2">
-												Join Event
-											</a>
-											<div>{eventsObj.post_title}</div>
-											<div>{meetID}</div>
-										</p>
+										<h1 className="jumbotron-heading">{eventsObj.post_title}</h1>
+
+										<h5 className="jumbotitle">
+											Hosted By:
+											{meetID}
+										</h5>
+
+										<a href="#" className="btn btn-light my-2">
+											Join This Event!
+										</a>
 									</div>
 								</div>
 								<div className="container mx-auto">
 									<div className="card pcard mx-auto">
-										<p className="list-group-item d-flex justify-content-between">
+										<h4> {eventsObj.post_title}</h4>
+										<h6 className="meetname">
 											<Link to={"/meetups/" + meetID}>
-												<span> {eventsObj.post_title}</span>
+												Hosted By:
+												{meetID}
 											</Link>
-										</p>
+										</h6>
+										<h6>{eventsObj.meta_keys.day}</h6>
+										<h6>{eventsObj.meta_keys.time}</h6>
 										<p>{eventsObj.post_content}</p>
+										<p className="text-muted">{eventsObj.meta_keys._rsvpYes}</p>
+										<p className="text-muted">{eventsObj.meta_keys._rsvpNo}</p>
 									</div>
 								</div>
 							</div>
@@ -56,7 +64,7 @@ export class Events extends React.Component {
 				</Context.Consumer>
 				<br />
 				<Link to="/">
-					<button className="btn btn-dark">Back home</button>
+					<button className="btn btn-light">Back home</button>
 				</Link>
 			</div>
 		);

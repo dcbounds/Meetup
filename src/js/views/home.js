@@ -18,7 +18,9 @@ export class Home extends React.Component {
 						</p>
 						<p>
 							<Link to="/meetups">
-								<button className="btn btn-light">Join Meetup</button>
+								<button className="btn btn-light button1" width="250px">
+									Join Meetup
+								</button>
 							</Link>
 						</p>
 					</div>

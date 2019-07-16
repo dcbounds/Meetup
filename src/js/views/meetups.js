@@ -21,7 +21,7 @@ export class Meetups extends React.Component {
 				<br />
 
 				<Link to="/">
-					<button className="btn btn-dark">Back home</button>
+					<button className="btn btn-light">Back home</button>
 				</Link>
 			</div>
 		);
