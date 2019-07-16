@@ -17,7 +17,7 @@ export class Home extends React.Component {
 							Join a local group to meet people, try something new, or do more of what you love.
 						</p>
 						<p>
-							<Link to="/meetups">
+							<Link to="">
 								<button className="btn btn-light button1" width="250px">
 									Join Meetup
 								</button>
