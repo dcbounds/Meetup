@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import "../../styles/meetups.scss";
+import "../../styles/index.scss";
 
 export class Meetups extends React.Component {
 	render() {

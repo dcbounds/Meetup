@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/home.scss";
+import "../../styles/index.scss";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";

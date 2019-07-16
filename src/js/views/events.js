@@ -40,14 +40,14 @@ export class Events extends React.Component {
 										</p>
 									</div>
 								</div>
-								<div className="container">
-									<div className="card">
+								<div className="container mx-auto">
+									<div className="card pcard mx-auto">
 										<p className="list-group-item d-flex justify-content-between">
 											<Link to={"/meetups/" + meetID}>
 												<span> {eventsObj.post_title}</span>
 											</Link>
-											<p>{"Blank Stuff"}</p>
 										</p>
+										<p>{eventsObj.post_content}</p>
 									</div>
 								</div>
 							</div>
