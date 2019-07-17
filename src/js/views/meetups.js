@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 import Moment from "react-moment";
-import Eventcard from "../component/eventcard.js";
+import Meetupcard from "../component/meetupcard.js";
 
 export class Meetups extends React.Component {
 	render() {
@@ -25,7 +25,7 @@ export class Meetups extends React.Component {
 				<Context.Consumer>
 					{({ store, actions }) => {
 						let meetID = this.props.match.params.theid;
-						let meetObj = actions.findMeetups(meetID);
+						let meetObj = actions.findMeetup(meetID);
 
 						return (
 							<div className="container mx-auto">
@@ -47,7 +47,7 @@ export class Meetups extends React.Component {
 						);
 					}}
 				</Context.Consumer>
-				<Eventcard />
+				<Meetupcard />
 
 				<br />
 				<Link to="/">

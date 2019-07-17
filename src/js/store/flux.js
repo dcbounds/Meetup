@@ -30,7 +30,12 @@ const getState = ({ getStore, setStore }) => {
 						return event[0];
 					}
 				}
-			}
+			},
+              findMeetupEvents: meetID => {
+                let store = getStore();
+                return store.events.filter (eventfilter => eventfilter.meta_keys._meetup === meetID);
+            }
+
 		}
 	};
 };

@@ -31,26 +31,27 @@ export class Events extends React.Component {
 								<div className="jumbotron jumbo text-center">
 									<div className="jumbocontain mx-auto">
 										<h1 className="jumbotron-heading">{eventsObj.post_title}</h1>
-
 										<h5 className="jumbotitle">
 											Hosted By:
 											{meetObj.post_title}
 										</h5>
-
 										<a href="#" className="btn btn-light my-2">
 											Join This Event!
 										</a>
 									</div>
 								</div>
+
 								<div className="container mx-auto">
 									<div className="card pcard mx-auto">
 										<h4> {eventsObj.post_title}</h4>
-										<h6 className="meetname">
-											<Link to={"/meetups/" + meetObj.ID}>
-												Hosted By:
-												{meetObj.post_title}
-											</Link>
-										</h6>
+										<h5 className="meetname">
+											<button className="meetbutton btn btn-sm btn-outline-secondary ">
+												<Link to={"/meetups/" + meetObj.ID} style={{ textDecoration: "none" }}>
+													Hosted By:
+													{meetObj.post_title}
+												</Link>
+											</button>
+										</h5>
 										<h6>{eventsObj.meta_keys.day}</h6>
 										<h6>{eventsObj.meta_keys.time}</h6>
 										<p>{eventsObj.post_content}</p>
