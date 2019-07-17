@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 import Moment from "react-moment";
+import Eventcard from "../component/eventcard.js";
 
 export class Meetups extends React.Component {
 	render() {
@@ -24,11 +25,13 @@ export class Meetups extends React.Component {
 				<Context.Consumer>
 					{({ store, actions }) => {
 						let meetID = this.props.match.params.theid;
+						let meetObj = actions.findMeetups(meetID);
+
 						return (
 							<div className="container mx-auto">
 								<div className="jumbotron jumbo text-center">
 									<div className="jumbocontain mx-auto">
-										<h1 className="jumbotron-heading">Testing Title...</h1>
+										<h1 className="jumbotron-heading">{meetObj.post_title}</h1>
 										<a href="#" className="btn btn-light my-2">
 											Join This Group!
 										</a>
@@ -37,13 +40,15 @@ export class Meetups extends React.Component {
 								<div className="container mx-auto">
 									<div className="card pcard mx-auto">
 										<h6 className="meetdeet" />
-										<p> Testing Testing 123...</p>
+										<p> {meetObj.post_content}</p>
 									</div>
 								</div>
 							</div>
 						);
 					}}
 				</Context.Consumer>
+				<Eventcard />
+
 				<br />
 				<Link to="/">
 					<button className="btn btn-light">Back home</button>
@@ -52,7 +57,6 @@ export class Meetups extends React.Component {
 		);
 	}
 }
-
 Meetups.propTypes = {
 	match: PropTypes.object
 };

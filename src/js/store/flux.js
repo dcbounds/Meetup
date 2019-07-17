@@ -14,7 +14,7 @@ const getState = ({ getStore, setStore }) => {
 						}
 					});
 					if (meet[0] !== undefined) {
-						return meet[0].post_title;
+						return meet[0];
 					}
 				}
 			},

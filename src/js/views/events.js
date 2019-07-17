@@ -25,7 +25,7 @@ export class Events extends React.Component {
 					{({ store, actions }) => {
 						let eventsID = this.props.match.params.theid;
 						let eventsObj = actions.findEvents(eventsID);
-						let meetID = actions.findMeetups(eventsObj.meta_keys._meetup);
+						let meetObj = actions.findMeetups(eventsObj.meta_keys._meetup);
 						return (
 							<div className="container mx-auto">
 								<div className="jumbotron jumbo text-center">
@@ -34,7 +34,7 @@ export class Events extends React.Component {
 
 										<h5 className="jumbotitle">
 											Hosted By:
-											{meetID}
+											{meetObj.post_title}
 										</h5>
 
 										<a href="#" className="btn btn-light my-2">
@@ -46,9 +46,9 @@ export class Events extends React.Component {
 									<div className="card pcard mx-auto">
 										<h4> {eventsObj.post_title}</h4>
 										<h6 className="meetname">
-											<Link to={"/meetups/" + meetID}>
+											<Link to={"/meetups/" + meetObj.ID}>
 												Hosted By:
-												{meetID}
+												{meetObj.post_title}
 											</Link>
 										</h6>
 										<h6>{eventsObj.meta_keys.day}</h6>
