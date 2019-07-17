@@ -27,6 +27,7 @@ export default class Eventcard extends React.Component {
 													</svg>
 													<div className="card-body">
 														<h5>{item.post_title}</h5>
+														<h6 className="text-muted">Hosted By: {meetup.post_title}</h6>
 
 														<div className="d-flex justify-content-between align-items-center">
 															<div className="btn-group">
@@ -41,7 +42,7 @@ export default class Eventcard extends React.Component {
 																	to={"/meetups/" + item.meta_keys._meetup}
 																	style={{ textDecoration: "none" }}>
 																	<button className="btn btn-sm btn-outline-secondary">
-																		View {meetup.post_title}
+																		View Meetup
 																	</button>
 																</Link>
 															</div>
