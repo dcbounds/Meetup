@@ -5,22 +5,11 @@
     transition: all .3s ease-in-out;
     background-size: cover;
     margin: 0 auto;
-    float: none;
     background-color: rgb(255, 255, 255);
     text-align: left;
+
 }
-.meetcard {
-    box-shadow: 0px 2px 4px 2px rgba(54, 54, 54, 0.048);
-    border-radius: 10px;
-    color: #3D606E;
-    transition: all .3s ease-in-out;
-    background-size: cover;
-    margin: 0 auto;
-    float: none;
-    background-color: rgb(255, 255, 255);
-    text-align: left;
-    width: cover;
-}
+
 
 .card:hover {
 
@@ -30,29 +19,21 @@
 }
 
 
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-top: 75px;
-}
+
 
 body {
     margin: 0;
-    font-family: "Helvetica Neue";
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #3D606E;
     text-align: left;
-    background-color: #ffffff;
+    background-color: #eeeeee;
 }
 .jumbotron {
     margin: 0;
-    font-family: "Helvetica Neue";
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 1.5;
     color: #ffffff;
@@ -63,7 +44,7 @@ body {
 }
 .homejumbo {
     margin: 0;
-    font-family: "Helvetica Neue";
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 1.5;
     color: #ffffff;
@@ -78,29 +59,21 @@ body {
 
 }
 
-.container {
-    margin: 3rem;
-    font-family: "Helvetica Neue";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-
-
-}
-
 .card-img-top {
     background-color: #3D606E;
     background-size: 500%;
     border-radius: 10px;
     background-position: top;
+
 }
 
 .btn {
     border-radius: 8px;
-    margin: 2px;
-    font-display: helvetica;
-    color: #3D606E;
+    border-color: #3D606E;
+    margin-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: #3D606E;
 
 }
 .btn:hover {
@@ -116,7 +89,12 @@ body {
 .button1 {
     border-radius: 8px;
     width: 200px;
-    font-display: helvetica;
+    font-family: Arial, Helvetica, sans-serif;
     color: #3D606E;
+    background-color: white;
+
+}
+.container {
+   margin: 3rem;
 
 }
