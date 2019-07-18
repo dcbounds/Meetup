@@ -14,45 +14,49 @@ export default class Eventcard extends React.Component {
 						<div className="row">
 							<Context.Consumer>
 								{({ store, actions }) => {
-									return store.events.map((item, index) => {
-										let meetup = actions.findMeetups(item.meta_keys._meetup);
-										return (
-											<div key={index} className="col-md-4 d-flex justify-content-between">
-												<div className="card mb-4">
-													<svg
-														className="bd-placeholder-img card-img-top"
-														width="100%"
-														height="225">
-														<span>{item.ID}</span>
-													</svg>
-													<div className="card-body">
-														<h5>{item.post_title}</h5>
-														<h6 className="text-muted">Hosted By: {meetup.post_title}</h6>
+									if (store.events.length > 0) {
+										return store.events.map((item, index) => {
+											let meetup = actions.findMeetups(item.meta_keys._meetup);
+											return (
+												<div key={index} className="col-md-4 d-flex justify-content-between">
+													<div className="card mb-4">
+														<svg
+															className="bd-placeholder-img card-img-top"
+															width="100%"
+															height="225">
+															<span>{item.ID}</span>
+														</svg>
+														<div className="card-body">
+															<h5>{item.post_title}</h5>
+															<h6 className="text-muted">
+																Hosted By: {meetup.post_title}
+															</h6>
 
-														<div className="d-flex justify-content-between align-items-center">
-															<div className="btn-group">
-																<Link
-																	to={"/events/" + item.ID}
-																	style={{ textDecoration: "none" }}>
-																	<button className="btn btn-sm btn-outline-secondary">
-																		Join Event
-																	</button>
-																</Link>
-																<Link
-																	to={"/meetups/" + item.meta_keys._meetup}
-																	style={{ textDecoration: "none" }}>
-																	<button className="btn btn-sm btn-outline-secondary">
-																		View Meetup
-																	</button>
-																</Link>
+															<div className="d-flex justify-content-between align-items-center">
+																<div className="btn-group">
+																	<Link
+																		to={"/events/" + item.ID}
+																		style={{ textDecoration: "none" }}>
+																		<button className="btn btn-sm btn-outline-secondary">
+																			Join Event
+																		</button>
+																	</Link>
+																	<Link
+																		to={"/meetups/" + item.meta_keys._meetup}
+																		style={{ textDecoration: "none" }}>
+																		<button className="btn btn-sm btn-outline-secondary">
+																			View Meetup
+																		</button>
+																	</Link>
+																</div>
+																<small className="text-muted">9 mins</small>
 															</div>
-															<small className="text-muted">9 mins</small>
 														</div>
 													</div>
 												</div>
-											</div>
-										);
-									});
+											);
+										});
+									}
 								}}
 							</Context.Consumer>
 						</div>
