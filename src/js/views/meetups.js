@@ -50,7 +50,7 @@ export class Meetups extends React.Component {
 										<div clssName="meetupmain">
 											<div className="mainmeetcard">
 												<div className="card-body">
-													<h4 className="font-bold ">Group Details</h4> <br />
+													<h4 className="font-bold">Group Details</h4> <br />
 													<h6 className="font-bold card-title text-muted">
 														{meetObj.post_title}
 													</h6>
@@ -69,11 +69,11 @@ export class Meetups extends React.Component {
 										</div>
 										<div className="meetupsidebar">
 											<div className="sidebartext bg-light">
-												<h4 className="font-bold">About</h4>
-												<p className="mb-0">
-													Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis
-													consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla
-													sed consectetur.
+												<h4 className="font-bold">Organizer</h4>
+												<h6 className="orgnizer">John Doe</h6>
+												<p className="text-muted mb-0">
+													John Doe is this groups organizer. Cras mattis consectetur purus sit
+													amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
 												</p>
 											</div>
 

@@ -45,13 +45,13 @@ export class Events extends React.Component {
 									<div className="card pcard mx-auto">
 										<h4> {eventsObj.post_title}</h4>
 										<h5 className="meetname">
-											<button className="meetbutton btn btn-sm btn-outline-secondary ">
-												<Link to={"/meetups/" + meetObj.ID} style={{ textDecoration: "none" }}>
-													Hosted By:
-													{meetObj.post_title}
-												</Link>
-											</button>
+											<Link to={"/meetups/" + meetObj.ID} style={{ textDecoration: "none" }}>
+												Hosted By:
+												{meetObj.post_title}
+											</Link>
 										</h5>
+										<br />
+										<br />
 										<h6>{eventsObj.meta_keys.day}</h6>
 										<h6>{eventsObj.meta_keys.time}</h6>
 										<p>{eventsObj.post_content}</p>
