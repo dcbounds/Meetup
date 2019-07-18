@@ -32,8 +32,8 @@ export class Meetups extends React.Component {
 								<div className="container mx-auto">
 									<div className="jumbotroncard p-4 p-md-5 text-white">
 										<div className="col-md-6 px-0">
-											<h1 className="font-bold">{meetObj.post_title}</h1>
-											<h4 className="font-bold">Miami, FL</h4>
+											<h1 className="posttitle">{meetObj.post_title}</h1>
+											<h4 className="location">Miami, FL</h4>
 											<br />
 											<p className=" my-3">
 												Multiple lines of text that form the lede, informing new readers quickly
@@ -49,16 +49,17 @@ export class Meetups extends React.Component {
 									<div className="allmeetcontent">
 										<div clssName="meetupmain">
 											<div className="mainmeetcard">
-												<div className="card-header">Group Details</div>
 												<div className="card-body">
-													<h5 className="card-title">{meetObj.post_title}</h5>
+													<h4 className="font-bold ">Group Details</h4> <br />
+													<h6 className="font-bold card-title text-muted">
+														{meetObj.post_title}
+													</h6>
 													<p className="card-text">
-														{meetObj.post_content}
-														<br />
-														Multiple lines of text that form the lede, informing new readers
-														quickly and efficiently about what’s most interesting in this
-														groups contents.
+														{meetObj.post_content}. Multiple lines of text that form the
+														lede, informing new readers quickly and efficiently about what’s
+														most interesting in this groups contents.
 													</p>
+													<br />
 													<a href="#" className="btn btn-primary">
 														Join Group
 													</a>
